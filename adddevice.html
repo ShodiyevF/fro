@@ -82,11 +82,10 @@
 
     <script>
         const elLeftItem = document.querySelectorAll('.left_main_item')
-        const elTime = document.querySelector('.right_header_time')
-        const elDate = document.querySelector('.right_header_date')
 
+        const elItem = document.querySelector('.left_item_settings')
         const classs = localStorage.getItem('route_class')
-        if (classs === 'left_item_') {
+        if (classs === 'left_item_settings') {
             elItem.classList.add('left_main_item--active')
         }
 

@@ -82,13 +82,12 @@
 
     <script>
         const elLeftItem = document.querySelectorAll('.left_main_item')
-        const elTime = document.querySelector('.right_header_time')
-        const elDate = document.querySelector('.right_header_date')
 
-        const classs = localStorage.getItem('route_class')
-        if (classs === 'left_item_') {
-            elItem.classList.add('left_main_item--active')
-        }
+        const elItem = document.querySelector('.left_item_settings')
+            const classs = localStorage.getItem('route_class')
+            if (classs === 'left_item_settings') {
+                elItem.classList.add('left_main_item--active')
+            }
 
         for (const i of elLeftItem) {
             i.onclick = (e) => {
