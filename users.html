@@ -109,7 +109,7 @@
                 <p class="modal_user_fullname">Abdusattorov aaaaaaaaaaaAbdusattor</p>
                 <div class="modal_user_info_wrapper">
                     <!-- <span class="modal_user_info_span">Izoh:</span> -->
-                    <p class="modal_user_info_text">asdasd asd asd as da sda sd asf g gggggggggggggggaaaaaaaaaaaa asdkjasd gkajsdasd ;asdasdk </p>
+                    <p class="modal_user_info_text"></p>
                     <p class="user_deleter display_none"></p>
                 </div>
             </div>
@@ -117,32 +117,17 @@
         </div>
     </div>
     
+    
     <script type="module" src="js/global.js"></script>
     <script type="module" src="js/checktoken.js"></script>
     <script type="module" src="js/users.js"></script>
     <script type="module" src="js/searchUsers.js"></script>
     <script type="module" src="js/Modal.js"></script>
     <script>
-        const elLeftItem = document.querySelectorAll('.left_main_item')
-        const elItem = document.querySelector('.left_item_users')
+        
         const elTime = document.querySelector('.right_header_time')
         const elDate = document.querySelector('.right_header_date')
-        
-        const classs = localStorage.getItem('route_class')
-        if (classs === 'left_item_users') {
-            elItem.classList.add('left_main_item--active')
-        }
-        
-        for (const i of elLeftItem) {
-            i.onclick = (e) => {
-                localStorage.setItem('route_class', i.classList[1])
-                for (const j of elLeftItem) {
-                    j.classList.remove('left_main_item--active')
-                }
-                i.classList.add('left_main_item--active')
-            }
-        }
-        
+
         function showTime() {
             let date = new Date();
             let h = date.getHours();
@@ -150,26 +135,27 @@
             let d = date.getDate()
             let mo = date.getMonth()
             let y = date.getFullYear()
-            
-            
-            
+
+
+
             h = (h < 10) ? "0" + h : h;
             m = (m < 10) ? "0" + m : m;
-            const a = (mo+1).toString().length === 1 ? '0' + (mo+1) : mo+1
-            
+            const a = (mo + 1).toString().length === 1 ? '0' + (mo + 1) : mo + 1
+
             let time = h + ":" + m;
             elTime.innerText = time;
             elTime.textContent = time;
             elDate.innerText = `${d}.${a}.${y}`;
             elDate.textContent = `${d}.${a}.${y}`;
-            
+
             setTimeout(showTime, 1000);
         }
-        
+
         showTime();
 
-        
+
     </script>
+    
 </body>
 
 </html>

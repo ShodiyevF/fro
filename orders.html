@@ -105,14 +105,6 @@
     <script>
         const elLeftItem = document.querySelectorAll('.left_main_item')
         const elItem = document.querySelector('.left_item_orders')
-        const elTime = document.querySelector('.right_header_time')
-        const elDate = document.querySelector('.right_header_date')
-        
-        const classs = localStorage.getItem('route_class')
-        console.log(classs);
-        if (classs === 'left_item_orders') {
-            elItem.classList.add('left_main_item--active')
-        }
         
         for (const i of elLeftItem) {
             i.onclick = (e) => {
