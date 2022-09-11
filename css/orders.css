@@ -1,0 +1,211 @@
+body{
+    overflow: hidden;
+}
+
+/* RIGHT_TOP */
+
+.add_order{
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.25);
+    background-color: #1E90FF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 10px 8px 10px 43px;
+    background-image: url('../img/orders/Icon_white.svg');
+    background-repeat: no-repeat;
+    background-size: 23px 24px;
+    background-position: calc(50% - 63px) center;
+    margin-left: auto;
+}
+
+.adduser{
+    width: 200px;
+    height: 40px;
+    background-color: #1E90FF;
+    /* background-image: url('../img/users/adduserwhite.svg'); */
+    /* background-repeat: no-repeat; */
+    /* background-size: 15%; */
+    /* background-position: calc(50% - 60px); */
+    border: 0.5px solid #1E90FF;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    /* padding-top: 10px; */
+    display: flex;
+    align-items: center;
+    padding-left: 60px;
+}
+
+/* ORDERS_LIST */
+
+.orders_container{
+    padding-left: 47px;
+    padding-right: 33px;
+}
+
+.orders_wrapper{
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+}
+
+
+
+.orders_top{
+    padding-top: 7px;
+    padding-bottom: 7px;
+    display: flex;
+    align-items: center;
+    background-color: #F8F8F8;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    border-bottom: 2px solid black;
+}
+
+.order_top_item{
+    padding: 0;
+    margin: 0;
+}
+
+.order_id{
+    margin-right: 37px;
+}
+
+.order_user{
+    margin-right: 25px;
+}
+
+.order_name_surname{
+    font-size: 12px;
+}
+
+.order_device_model{
+    margin-right: 33px;
+}
+
+.order_device_bug{
+    margin-right: 37px;
+}
+
+.order_start_time{
+    margin-right: 37px;
+}
+
+.order_end_time{
+    margin-right: 65px;
+}
+
+.orders_list{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    height: 400px;
+    overflow: auto;
+}
+
+.orders_list::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+.orders_list::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.orders_list::-webkit-scrollbar-thumb {
+    background-color: #b9bdbd;
+    outline: 1px solid slategrey;
+}
+.orders_item{
+    position: relative;
+    display: flex;  
+    align-items: center;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-bottom: 2px solid black;
+}
+
+.users_item-bg{
+    background-color: rgba(196, 196, 196, 0.2);
+}
+
+.orders_item:last-child{
+    border: none;
+}
+
+.order_item_text{
+    margin: 0;
+    padding: 0;
+}
+
+.order_item_id{
+    width: 88px;
+    display: flex;
+    margin-right: 40px;
+    font-size: 16px;
+}
+
+.order_item_owner{
+    width: 90px;
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    margin-right: 71px;
+}
+
+.order_item_owner:hover{
+    color: dodgerblue;
+}
+
+.order_item_device{
+    width: 116px;
+    margin-right: 33px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.order_item_about{
+    width: 100px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-right: 36px;
+}
+
+.order_item_start_date{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 36px;
+}
+
+.order_start_time_item{
+    margin-top: -4px;
+}
+
+.order_item_date_wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 123px;
+}
+
+.order_item_time_wrapper{
+    margin-top: -4px;
+}
+
+.order_item_status{
+    cursor: pointer;
+    position: absolute;
+    width: 90px;
+    text-align: center;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    background-color: #CFD8DC;
+    font-size: 12px;
+    font-weight: 500;
+    right: 25px;
+    border-radius: 2px;
+}

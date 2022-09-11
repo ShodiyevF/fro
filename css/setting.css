@@ -1,0 +1,90 @@
+.birnima{
+    display: flex;
+    margin-bottom: 40px;    
+}
+
+.companys_wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.companys{
+    width: 130px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+.company{
+    padding-top: 15px;
+}
+
+.right_main{
+    /* display: flex; */
+}
+
+.logout_btn{
+    width: 100px;
+    height: 30px;
+    
+}
+
+.logout_btn_wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: auto;
+}
+
+.logout_btn{
+    width: 100px;
+    border: 0.5px solid #1E90FF;
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    background-color: #1E90FF;
+    color: white;
+}
+
+.line{
+    width: 1050px;
+    background-color: black;
+    border: 0.5px solid black;
+}
+
+.create_company_input{
+    width: 150px;
+    padding: 20px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    color: black;
+    margin-right: 20px;
+}
+
+.create_company_btn{
+    padding-right: 20px;
+    padding-left: 20px;
+    border: 0.5px solid #1E90FF;
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    background-color: #1E90FF;
+    color: white;
+}
+
+.addcompany{
+    margin-bottom: 35px;
+}
+
+.workers_link{
+    text-decoration: none;
+    background-color: #1E90FF;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.25);
+}
+
+.workers_link_btn{
+    margin-right: 20px;
+}

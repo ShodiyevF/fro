@@ -1,0 +1,123 @@
+.right_header_title_wrapper{
+    display: flex;
+    align-items: center;
+}
+
+.right_header_title_img_user{
+    width: 50px;
+}
+
+.right_header_title{
+    font-size: 20px;
+}
+
+/* MAIN */
+
+.adduser{
+    padding-top: 44px;
+}
+
+.adduser_form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.adduser_btn{
+    width: 200px;
+    height: 40px;
+    background-color: #1E90FF;
+    background-image: url('../img/users/adduserwhite.svg');
+    background-repeat: no-repeat;
+    background-size: 15%;
+    background-position: calc(50% - 60px);
+    border: 0.5px solid #1E90FF;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding-left: 60px;
+    margin-left: auto;
+    margin-bottom: 50px;
+    font-size: 16px;
+}
+
+.adduser_inputs{
+    width: 92%;
+    border: 1px solid #A7A7A7;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+    padding: 32px 39px 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.adduser_input::placeholder {
+    opacity: 0.6;
+}
+
+.adduser_input_wrapper{
+    width: 269px;
+    margin-right: 52px;
+    display: flex;
+    flex-direction: column;
+}
+
+.adduser_input_wrapper_nomargin{
+    margin: 0;
+}
+
+.input_label{
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.adduser_input{
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 13px;
+    border: 1px solid #A7A7A7;
+    font-size: 16px;
+    /* box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25); */
+    border-radius: 9px;
+    color: black;
+    margin-bottom: 50px;
+}
+
+.adduser_input{
+    resize: none;
+}
+
+.tel_wrapper{
+    border: 1px solid #A7A7A7;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+}
+
+.tel_input{
+    width: 174px;
+    margin-bottom: 0;
+    border-left: none;
+    border-top-left-radius: 0;
+    border: none;
+    border-bottom-left-radius: 0;
+    outline: none;
+}
+
+.tel_text{
+    margin: 0;
+    /* border: 1px solid #A7A7A7; */
+    /* border-radius: 9px; */
+    /* border-top-right-radius: 0; */
+    /* border-bottom-right-radius: 0; */
+    /* border-radius: 9px; */
+    border-right: none;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 13px;
+}

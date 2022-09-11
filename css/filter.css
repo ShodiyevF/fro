@@ -1,0 +1,91 @@
+.filters_adduser{
+    margin-bottom: 45px;
+}
+
+.filters_container{
+    display: flex;
+    justify-content: space-between;
+    /* padding-top: 44px; */
+}
+
+.filters{
+    width: 352px;
+    padding: 12.5px 15px;
+    padding-left: 35px;
+    padding-right: 0;
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.25);
+    background-image: url('../img/users/filter.svg');
+    background-repeat: no-repeat;
+    background-position: calc(50% - 157px);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.filter{
+    padding: 0px;
+    margin: 0px;
+    margin-right: 15px;
+    padding-right: 35px;
+    border: none;
+    border-right: 1px solid #E5E5E5;
+    background-image: url('../img/users/bottom.svg');
+    background-repeat: no-repeat;
+    font-family: 'Ubuntu';
+    background-color: transparent;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.filter_status{
+    border-left: 1px solid #C4C4C4;
+    padding-left: 10px;
+    background-position: calc(50% + 25px);
+}
+
+.filter_fish{
+    background-position: calc(50% + 42px);
+}
+
+.filter_date{
+    background-position: calc(50% + 15px);
+    border: none;
+    padding-right: 35px;
+    margin-right: 0;
+}
+
+.adduser{
+    width: 200px; 
+    height: 40px;
+    background-color: #1E90FF;
+    background-image: url('../img/users/adduserwhite.svg');
+    background-repeat: no-repeat;
+    background-size: 15%;
+    background-position: calc(50% - 60px);
+    border: 0.5px solid #1E90FF;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    /* padding-top: 10px; */
+    display: flex;
+    align-items: center;
+    padding-left: 60px;
+}
+
+/* ORDERS */
+
+.filters_adduser{
+    width: auto;
+    background-position: calc(50% - 190px);
+    margin: 0;
+}
+
+.filter_status_id{
+    background-position: calc(50% + 10px);
+}
+
+.filter_order_id{
+    background-position: calc(50% + 25px);
+}

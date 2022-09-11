@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menu</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="big_wrapper">
+        <section class="left">
+            
+            <header class="left_header">
+            
+                <a class="left_header_logo_link" href="main.html">
+                    <img class="left_header_logo" src="img/main/logo.png" alt="logo">
+                </a>
+            
+            </header>
+            
+            <main class="left_main">
+                <ul class="left_main_list">
+                    
+                </ul>
+            </main>
+            
+            <footer class="left_footer">
+                <ul class="left_main_list">
+                    <li class="left_main_item left_item_settings">
+                        <a class="left_main_item_link" href="settings.html">
+                            <img class="left_main_item_img" src="img/main/settings.svg" alt="">
+                            <p class="left_main_item_text">Sozlamalar</p>
+                        </a>
+                    </li>
+                </ul>
+            </footer>
+            
+        </section>
+        
+        <section class="right">
+            <header class="right_header">
+                <div class="right_header_container">
+                    <div class="right_header_title_wrapper">
+                        <!-- <img class="right_header_title_img" src="a" alt="none"> -->
+                        <h1 class="right_header_title"></h1>
+                    </div>
+                    <div class="right_header_time_input_wrapper">
+                        <p class="right_header_date"></p>
+                        <p class="right_header_time" onload="showTime()"></p>
+                        <input class="right_header_input" type="text" placeholder="Qidirish...">
+                    </div>
+                </div>
+            </header>
+            <main class="right_main"></main>
+            <footer class="right_footer"></footer>
+        </section>
+    </div>
+    
+    <script type="module" src="js/global.js"></script>
+    <script type="module" src="js/checktoken.js"></script>
+    <script type="module" src="js/showtime.js"></script>
+    <script>
+        const elLeftItem = document.querySelectorAll('.left_main_item')
+        const elTime = document.querySelector('.right_header_time')
+        const elDate = document.querySelector('.right_header_date')
+
+        const classs = localStorage.getItem('route_class')
+            if (classs === 'left_item_') {
+                elItem.classList.add('left_main_item--active')
+            }
+        
+        for (const i of elLeftItem) {
+            i.onclick = (e) => {
+                localStorage.setItem('route_class', i.classList[1])
+                for (const j of elLeftItem) {
+                    j.classList.remove('left_main_item--active')
+                }
+                i.classList.add('left_main_item--active')
+            }            
+        }
+    </script>
+</body>
+</html>

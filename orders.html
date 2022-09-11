@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buyurtmalar</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/orders.css">
+    <link rel="stylesheet" href="css/filter.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="big_wrapper">
+        <section class="left">
+            
+            <header class="left_header">
+                
+                <a class="left_header_logo_link" href="main.html">
+                    <img class="left_header_logo" src="img/main/logo.png" alt="logo" height="60">
+                </a>
+                
+            </header>
+            
+            <main class="left_main">
+                <ul class="left_main_list">
+                    <li class="left_main_item left_item_users">
+                        <a class="left_main_item_link" href="users.html">
+                            <img class="left_main_item_img" src="img/main/mijozlar.svg" alt="">
+                            <p class="left_main_item_text">Mijozlar</p>
+                        </a>
+                    </li>
+                    <li class="left_main_item left_item_orders">
+                        <a class="left_main_item_link" href="orders.html">
+                            <img class="left_main_item_img" src="img/main/orders.svg" alt="">
+                            <p class="left_main_item_text">Buyurtmalar</p>
+                        </a>
+                    </li>
+                    <li class="left_main_item left_item_cash">
+                        <a class="left_main_item_link" href="cash.html">
+                            <img class="left_main_item_img" src="img/main/moliya.svg" alt="">
+                            <p class="left_main_item_text">Moliya</p>
+                        </a>
+                    </li>
+                    <li class="left_main_item left_item_statistic">
+                        <a class="left_main_item_link" href="statistic.html">
+                            <img class="left_main_item_img" src="img/main/statistic.svg" alt="">
+                            <p class="left_main_item_text">Statistka</p>
+                        </a>
+                    </li>
+                </ul>
+            </main>
+            
+            <footer class="left_footer">
+                <ul class="left_main_list">
+                    <li class="left_main_item left_item_settings">
+                        <a class="left_main_item_link" href="settings.html">
+                            <img class="left_main_item_img" src="img/main/settings.svg" alt="">
+                            <p class="left_main_item_text">Sozlamalar</p>
+                        </a>
+                    </li>
+                </ul>
+            </footer>
+            
+        </section>
+        
+        <section class="right">
+            <header class="right_header">
+                <div class="right_header_container">
+                    <div class="right_header_title_wrapper">
+                        <img class="right_header_title_img" src="img/orders/logo_icon.svg" alt="none">
+                        <h1 class="right_header_title">Buyurtmalar</h1>
+                    </div>
+                    <div class="right_header_time_input_wrapper">
+                        <p class="right_header_date"></p>
+                        <p class="right_header_time" onload="showTime()"></p>
+                        <input class="right_header_input" type="text" placeholder="Qidirish...">
+                    </div>
+                </div>
+            </header>
+            <main class="right_main">
+
+                <section class="filters_adduser"> 
+                    <div class="right_container filters_container">
+                        <div class="filters filters_adduser">
+                            <button class="filter filter_status filter_status_id">ID</button>
+                            <button class="filter filter_order_id">Status</button>
+                            <button class="filter filter_fish">Ism Familiya</button>
+                            <button class="filter filter_date">Sana</button>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="message_modal message_modall display_none right_container">
+
+                </div>
+                
+                <section class="orders">
+                    <div class="right_container">
+                        <div class="orders_wrapper">
+                            <div class="orders_top orders_container">
+                                <p class="order_top_item order_id">Buyurtma ID</p>
+                                <p class="order_top_item order_user">Mijoz (<span class="order_name_surname">familiya va ismi</span>)</p>
+                                <p class="order_top_item order_device_model">Qurulma rusumi</p>
+                                <p class="order_top_item order_device_bug">Qurulma ayibi</p>
+                                <p class="order_top_item order_start_time">Qabul vaqti</p>
+                                <p class="order_top_item order_end_time">Tugash vaqti</p>
+                                <p class="order_top_item order_status">Status</p>
+                            </div>
+                            <ul class="orders_list">
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <footer class="right_footer"></footer>
+        </section>
+    </div>
+    
+    <script type="module" src="js/global.js"></script>
+    <script type="module" src="js/checktoken.js"></script>
+    <script type="module" src="js/orders.js"></script>
+    <script type="module" src="js/showtime.js"></script>
+    <script type="module" src="js/searchOrders.js"></script>
+    <script>
+        const elLeftItem = document.querySelectorAll('.left_main_item')
+        const elItem = document.querySelector('.left_item_orders')
+        const elTime = document.querySelector('.right_header_time')
+        const elDate = document.querySelector('.right_header_date')
+        
+        const classs = localStorage.getItem('route_class')
+        console.log(classs);
+        if (classs === 'left_item_orders') {
+            elItem.classList.add('left_main_item--active')
+        }
+        
+        for (const i of elLeftItem) {
+            i.onclick = (e) => {
+                localStorage.setItem('route_class', i.classList[1])
+                for (const j of elLeftItem) {
+                    j.classList.remove('left_main_item--active')
+                }
+                i.classList.add('left_main_item--active')
+            }
+        }
+    </script>
+</body>
+
+</html>
+
+
+<!-- 
+<li class="orders_item">
+    <div class="orders_container orders_item">
+        <p class="order_item_text order_item_id"># 00122136</p>
+        <a class="order_item_text order_item_owner" href="user.html">Abdusattorov Abdusattor</a>
+        <p class="order_item_text order_item_device">Galaxaaaaaaaaaaaaaaaaaaaaiy A52</p>
+        <p class="order_item_text order_item_about">aaaaaaaaaaaaaaaaaaaaaa</p>
+        <p class="order_item_text order_item_start_date">01.10.2021 <span class="order_start_time_item">09:00</span></p>
+        <div class="order_item_text order_item_date_wrapper">
+            <span class="order_item_text order_item_date">02.10.2021</span>
+            <div class="order_item_text order_item_time_wrapper">
+                <span class="order_item_text order_start_time_item">12:00 / </span>
+                <span class="order_item_text order_end_time_item">-11:42</span>
+            </div>
+        </div>
+        <p class="order_item_text order_item_status">Tuzalmadi</p>
+    </div>
+</li>
+<li class="orders_item users_item-bg">
+    <div class="orders_container orders_item">
+        <p class="order_item_text order_item_id"># 00122136</p>
+        <a class="order_item_text order_item_owner" href="user.html">Abdusattorov Abdusattor</a>
+        <p class="order_item_text order_item_device">Galaxiy A52</p>
+        <p class="order_item_text order_item_about">aaaaaaaaaaaaaaaaaaaaaa</p>
+        <p class="order_item_text order_item_start_date">01.10.2021 <span class="order_start_time_item">09:00</span></p>
+        <div class="order_item_text order_item_date_wrapper">
+            <span class="order_item_text order_item_date">02.10.2021</span>
+            <div class="order_item_text order_item_time_wrapper">
+                <span class="order_item_text order_start_time_item">12:00 / </span>
+                <span class="order_item_text order_end_time_item">-11:42</span>
+            </div>
+        </div>
+        <p class="order_item_text order_item_status">Tuzalmadi</p>
+    </div>
+</li>
+<li class="orders_item">
+    <div class="orders_container orders_item">
+        <p class="order_item_text order_item_id"># 00122136</p>
+        <a class="order_item_text order_item_owner" href="user.html">Abdusattorov Abdusattor</a>
+        <p class="order_item_text order_item_device">Galaxiy A52</p>
+        <p class="order_item_text order_item_about">aaaaaaaaaaaaaaaaaaaaaa</p>
+        <p class="order_item_text order_item_start_date">01.10.2021 <span class="order_start_time_item">09:00</span></p>
+        <div class="order_item_text order_item_date_wrapper">
+            <span class="order_item_text order_item_date">02.10.2021</span>
+            <div class="order_item_text order_item_time_wrapper">
+                <span class="order_item_text order_start_time_item">12:00 / </span>
+                <span class="order_item_text order_end_time_item">-11:42</span>
+            </div>
+        </div>
+        <p class="order_item_text order_item_status">Tuzalmadi</p>
+    </div>
+</li>
+<li class="orders_item users_item-bg">
+    <div class="orders_container orders_item">
+        <p class="order_item_text order_item_id"># 00122136</p>
+        <a class="order_item_text order_item_owner" href="user.html">Abdusattorov Abdusattor</a>
+        <p class="order_item_text order_item_device">Galaxiy A52</p>
+        <p class="order_item_text order_item_about">aaaaaaaaaaaaaaaaaaaaaa</p>
+        <p class="order_item_text order_item_start_date">01.10.2021 <span class="order_start_time_item">09:00</span></p>
+        <div class="order_item_text order_item_date_wrapper">
+            <span class="order_item_text order_item_date">02.10.2021</span>
+            <div class="order_item_text order_item_time_wrapper">
+                <span class="order_item_text order_start_time_item">12:00 / </span>
+                <span class="order_item_text order_end_time_item">-11:42</span>
+            </div>
+        </div>
+        <p class="order_item_text order_item_status">Tuzalmadi</p>
+    </div>
+</li>
+<li class="orders_item">
+    <div class="orders_container orders_item">
+        <p class="order_item_text order_item_id"># 00122136</p>
+        <a class="order_item_text order_item_owner" href="user.html">Abdusattorov Abdusattor</a>
+        <p class="order_item_text order_item_device">Galaxiy A52</p>
+        <p class="order_item_text order_item_about">aaaaaaaaaaaaaaaaaaaaaa</p>
+        <p class="order_item_text order_item_start_date">01.10.2021 <span class="order_start_time_item">09:00</span></p>
+        <div class="order_item_text order_item_date_wrapper">
+            <span class="order_item_text order_item_date">02.10.2021</span>
+            <div class="order_item_text order_item_time_wrapper">
+                <span class="order_item_text order_start_time_item">12:00 / </span>
+                <span class="order_item_text order_end_time_item">-11:42</span>
+            </div>
+        </div>
+        <p class="order_item_text order_item_status">Tuzalmadi</p>
+    </div>
+</li>
+<li class="orders_item users_item-bg">
+    <div class="orders_container orders_item">
+        <p class="order_item_text order_item_id"># 00122136</p>
+        <a class="order_item_text order_item_owner" href="user.html">Abdusattorov Abdusattor</a>
+        <p class="order_item_text order_item_device">Galaxiy A52</p>
+        <p class="order_item_text order_item_about">aaaaaaaaaaaaaaaaaaaaaa</p>
+        <p class="order_item_text order_item_start_date">01.10.2021 <span class="order_start_time_item">09:00</span></p>
+        <div class="order_item_text order_item_date_wrapper">
+            <span class="order_item_text order_item_date">02.10.2021</span>
+            <div class="order_item_text order_item_time_wrapper">
+                <span class="order_item_text order_start_time_item">12:00 / </span>
+                <span class="order_item_text order_end_time_item">-11:42</span>
+            </div>
+        </div>
+        <p class="order_item_text order_item_status">Tuzalmadi</p>
+    </div>
+</li>
+<li class="orders_item">
+    <div class="orders_container orders_item">
+        <p class="order_item_text order_item_id"># 00122136</p>
+        <a class="order_item_text order_item_owner" href="user.html">Abdusattorov Abdusattor</a>
+        <p class="order_item_text order_item_device">Galaxiy A52</p>
+        <p class="order_item_text order_item_about">aaaaaaaaaaaaaaaaaaaaaa</p>
+        <p class="order_item_text order_item_start_date">01.10.2021 <span class="order_start_time_item">09:00</span></p>
+        <div class="order_item_text order_item_date_wrapper">
+            <span class="order_item_text order_item_date">02.10.2021</span>
+            <div class="order_item_text order_item_time_wrapper">
+                <span class="order_item_text order_start_time_item">12:00 / </span>
+                <span class="order_item_text order_end_time_item">-11:42</span>
+            </div>
+        </div>
+        <p class="order_item_text order_item_status">Tuzalmadi</p>
+    </div>
+</li>
+<li class="orders_item users_item-bg">
+    <div class="orders_container orders_item">
+        <p class="order_item_text order_item_id"># 00122136</p>
+        <a class="order_item_text order_item_owner" href="user.html">Abdusattorov Abdusattor</a>
+        <p class="order_item_text order_item_device">Galaxiy A52</p>
+        <p class="order_item_text order_item_about">aaaaaaaaaaaaaaaaaaaaaa</p>
+        <p class="order_item_text order_item_start_date">01.10.2021 <span class="order_start_time_item">09:00</span></p>
+        <div class="order_item_text order_item_date_wrapper">
+            <span class="order_item_text order_item_date">02.10.2021</span>
+            <div class="order_item_text order_item_time_wrapper">
+                <span class="order_item_text order_start_time_item">12:00 / </span>
+                <span class="order_item_text order_end_time_item">-11:42</span>
+            </div>
+        </div>
+        <p class="order_item_text order_item_status">Tuzalmadi</p>
+    </div>
+</li>
+<li class="orders_item">
+    <div class="orders_container orders_item">
+        <p class="order_item_text order_item_id"># 00122136</p>
+        <a class="order_item_text order_item_owner" href="user.html">Abdusattorov Abdusattor</a>
+        <p class="order_item_text order_item_device">Galaxiy A52</p>
+        <p class="order_item_text order_item_about">aaaaaaaaaaaaaaaaaaaaaa</p>
+        <p class="order_item_text order_item_start_date">01.10.2021 <span class="order_start_time_item">09:00</span></p>
+        <div class="order_item_text order_item_date_wrapper">
+            <span class="order_item_text order_item_date">02.10.2021</span>
+            <div class="order_item_text order_item_time_wrapper">
+                <span class="order_item_text order_start_time_item">12:00 / </span>
+                <span class="order_item_text order_end_time_item">-11:42</span>
+            </div>
+        </div>
+        <p class="order_item_text order_item_status">Tuzalmadi</p>
+    </div>
+</li>
+<li class="orders_item users_item-bg">
+    <div class="orders_container orders_item">
+        <p class="order_item_text order_item_id"># 00122136</p>
+        <a class="order_item_text order_item_owner" href="user.html">Abdusattorov Abdusattor</a>
+        <p class="order_item_text order_item_device">Galaxiy A52</p> -->
+        <!-- <p class="order_item_text order_item_about">aaaaaaaaaaaaaaaaaaaaaa</p>
+        <p class="order_item_text order_item_start_date">01.10.2021 <span class="order_start_time_item">09:00</span></p>
+        <div class="order_item_text order_item_date_wrapper">
+            <span class="order_item_text order_item_date">02.10.2021</span>
+            <div class="order_item_text order_item_time_wrapper">
+                <span class="order_item_text order_start_time_item">12:00 / </span>
+                <span class="order_item_text order_end_time_item">-11:42</span>
+            </div>
+        </div>
+        <p class="order_item_text order_item_status">Tuzalmadi</p>
+    </div>
+</li> -->

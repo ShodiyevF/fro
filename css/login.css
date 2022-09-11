@@ -1,0 +1,103 @@
+body {
+    background-color: #E5E5E5;
+}
+
+.login {
+    height: 100vh;
+    background-image: url('../img/login/login-bg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: calc(50% + 20px) calc(50% - 20px);
+}
+
+.login_container {
+    padding-top: 130px;
+}
+
+.login_form {
+    width: 444px;
+    background-color: white;
+    padding: 14px 42px 17px 52px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    margin-left: auto;
+}
+
+.logo {
+    width: 118px;
+    height: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+.login_title {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-weight: 50%;
+    margin-bottom: 40px;
+}
+
+.login_input {
+    width: 350px;
+    height: 50px;
+    margin-bottom: 15px;
+    padding-left: 20px;
+    padding-top: 13px;
+    padding-bottom: 14px;
+    font-size: 15px;
+    border: none;
+    border: 2px solid #97AFCB;
+    border-radius: 4px;
+}
+
+.input_password {
+    margin-bottom: 11px;
+}
+
+.login_links {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.login_link {
+    color: #1E90FF;
+    text-decoration: none;
+}
+
+.login_forget_btn {
+    color: #1E90FF;
+}
+
+.login_remember_me {
+    border-left: 2px solid black;
+    padding-left: 20px;
+    display: flex;
+}
+
+.login_remember_btn {
+    margin-right: 20px;
+}
+
+.login_remember_check {
+    width: 26px;
+    height: 22px;
+    border: 1px solid #97AFCB;
+    border-radius: 3px;
+}
+
+.login_send_btn {
+    width: 150px;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #1E90FF;
+    color: white;
+    font-size: 20px;
+    border: none;
+    border-radius: 4px;
+}

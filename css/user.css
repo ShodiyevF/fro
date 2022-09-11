@@ -1,0 +1,500 @@
+.user_info{
+    padding-top: 33px;
+}
+
+.user_info_container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.order_count{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 47px;
+}
+
+.null_orders{
+    color: red;
+}
+
+.user_order_list{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    height: 500px;
+    overflow: auto;
+    padding: 5px;
+}
+
+.user_order_list::-webkit-scrollbar {
+    width: 0px;
+}
+
+/* Track */
+.user_order_list::-webkit-scrollbar-track {
+    width: 0px;
+    background: #f1f1f1;
+}
+
+/* Handle */
+.user_order_list::-webkit-scrollbar-thumb {
+    width: 0px;
+    background: #888;
+}
+
+.user_order_item{
+    position: relative;
+    width: 569px;
+    border: 1px solid #A7A7A7;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+    margin-bottom: 50px;
+    padding: 23px 21px 14px 24px;
+}
+
+.user_order_item_wrapper{
+    display: flex;
+    align-items: center;
+}
+
+.user_order_item_title{
+    margin: 0;
+    padding: 0;
+    color: dodgerblue;
+    font-size: 20px;
+}
+
+.user_order_item_body{
+    margin: 0;
+    padding: 0;
+}
+
+.user_order_item_id_wrapper{
+    margin-bottom: 11px;
+}
+
+.user_order_item_title_id{
+    font-size: 25px;
+    margin-right: 50px;
+}
+
+.user_order_item_body_id{
+    font-size: 25px;
+}
+
+.user_order_item_status_wrapper{
+    position: absolute;
+    top: 60px;
+    right: 21.5px;
+    background-color: rgba(196, 196, 196, 20%);
+    display: flex;
+    flex-direction: column;
+    padding-top: 2px;
+    border-radius: 4px;
+}
+
+
+.user_order_item_status{
+    margin-left: auto;
+    padding: 5px 10px;
+    background-color: #F5F5F5;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.user_order_item_status_border_none{
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.user_order_item_status_btn{
+    width: 100%;
+    margin-left: auto;
+    padding: 5px 10px;
+    background-color: #F5F5F5;
+    font-size: 12px;
+    font-weight: 500;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid black;
+    text-align: right;
+    color: black;
+}
+
+.user_order_item_status_btn:last-child{
+    border: none;
+}
+
+.user_order_item_model_wrapper{
+    margin-bottom: 11px;
+}
+.user_order_item_title_model{
+    margin-right: 25px;
+}
+
+
+.user_order_item_bug_wrapper{
+    margin-bottom: 16px;
+    
+}
+.user_order_item_title_bug{
+    margin-right: 50px;
+}
+
+
+.user_order_item_gettime_wrapper{
+    margin-bottom: 14px;
+    
+}
+.user_order_item_title_gettime{
+    margin-right: 67px;
+}
+
+
+.user_order_item_endtime_wrapper{
+    border-bottom: 1px solid #C4C4C4;    
+    padding-bottom: 24px;
+    margin-bottom: 14px;
+}
+.user_order_item_title_endtime{
+    margin-right: 57px;
+}
+
+.user_order_item_body_price{
+    margin-left: auto;
+}
+
+.user_order_item_info_span{
+    background-color: transparent;
+    padding: 0;
+    font-size: 20px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user_order_item_info_btn{
+    width: 17px;
+    height: 20px;
+    border: none;
+    background-color: transparent;
+    background-image: url('../img/users/user_info_btn.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 5px;
+}
+
+
+/* USERINFO RIGHT */
+
+.user_info_body{
+    width: 340px;
+    display: flex;
+    flex-direction: column;
+}
+
+.user_info_body_wrapper{
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.user_info_btn{
+    width: 200px;
+    height: 40px;
+    background: #1E90FF;
+    padding: 0;
+    margin: 0;
+    border: 0.5px solid #1E90FF;
+    box-sizing: border-box;
+    padding: 11px 22px;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    margin-left: auto;
+    margin-bottom: 35px;
+}
+
+.user_info_header{
+    position: relative;
+    display: flex;
+    background-color: rgba(196, 196, 196, 20%);
+    padding: 11px 7px 11px 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.user_info_fullname{
+    width: 185px;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    user-select: none;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.user_info_status{
+    width: 25px;
+    height: 25px;
+    border: none;
+    background-color: transparent;
+    padding-left: 35px;
+    margin-left: auto;
+    border-right: 1px solid #C4C4C4;
+    background-image: url('../img/users/tanish.svg');
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.user_info_list{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.user_delete{
+    width: 18px;
+    height: 18px;
+    margin-left: 12px;
+    background-image: url('./../img/users/trash-can-solid.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin-top: 3px;
+    background-size: contain;
+    border: none;
+    margin-right: 10px;
+}
+
+.user_delete_cancel{
+    color: red;
+    cursor: pointer;
+}
+
+.user_delete_next{
+    width: 89px;
+    color: green;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: transparent;
+    padding: 0;
+}
+
+.modal-content{
+    width: 400px;
+
+}
+
+.modal_content_wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.modal-content.modal-content.modal-content{
+    width: 350px;
+    padding-bottom: 10px;
+}
+
+.user_info_item{
+    display: flex;
+    align-items: center;
+    padding-top: 16px;
+    padding-bottom: 13px;
+    border-bottom: 1px solid rgba(196, 196, 196, 1);
+}
+
+.user_info_item:last-child{
+    border: none;
+}
+
+.user_info_item_title{
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+}
+
+.user_info_item_value{
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.user_info_item_title_id{
+    margin-right: 15px;
+}
+
+.user_info_item_title_tel{
+    margin-right: 51px;
+}
+
+.user_info_item_title_yil{
+    margin-right: 55px;
+}
+
+.user_info_item_value_tel{
+    color: black;
+    text-decoration: none;
+}
+
+.user_info_item_value_tel:hover{
+    color: dodgerblue;
+}
+
+.user_info_item_title_address{
+    margin-right: 25px;
+}
+
+.user_info_item_info{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.user_info_item_title_info{
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+.user_info_item_value_info{
+    width: 100%;
+    border: none;
+    height: 150px;
+    overflow: auto;
+    border: none;
+}
+
+/* USER_STATUS */
+
+
+.user_statuts{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 47px;
+    right: 86px;
+    background-color: #F3F3F3;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.user_status{
+    width: 25px;
+    height: 25px;
+    border: none;
+    border-width: 1px;
+    padding-bottom: 35px;
+    border-bottom: 1px solid black;
+    background-image: url('../img/users/tanish.svg');
+    background-color: transparent;
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.user_status:last-child{
+    border: none;
+}
+
+.user_status_heart{
+    background-image: url('../img/users/tanish.svg');
+}
+
+.user_status_blackdocument{
+    background-image: url('../img/users/muammo.svg');
+}
+
+.user_status_circle{
+    background-image: url('../img/users/sinalmagan.svg');
+}
+
+.user_status_star{
+    background-image: url('../img/users/yaxshi.svg');
+}
+
+.display_none{
+    display: none;
+}
+
+.user_order_item_status:hover{
+    cursor: pointer;
+}
+
+.user_update{
+    width: 20px;
+    margin-right: 0;
+    padding-right: 30px;
+    background-image: url('../img/users/pencil-solid.svg');
+    margin-left: 0;
+}
+
+.line{
+    margin: 0;
+    border-color: #C4C4C4;
+    border-left: none;
+}
+
+.close_btn{
+    margin-bottom: 15px;
+}
+
+.close{
+    margin-left: auto;
+}
+
+.border_line{
+    background-color: black;
+    border-color: black;
+    border-bottom: none;
+}
+
+.adduser_input_wrapper{
+    width: auto;
+    margin-right: 0px;
+    margin-bottom: 20px;
+}
+
+.adduser_input{
+    width: auto;
+    margin-bottom: 0px;
+}
+
+.tel_input{
+    width: 277px;
+}
+
+.send_edited{
+    width: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+    box-shadow: 0px 0px 4px 2px rgb(0 0 0 / 25%);
+    border-radius: 5px;
+    margin-left: auto;
+}
+
+.wrapper_next{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.pointer_none{
+    cursor: progress;
+    background-color: red;
+}

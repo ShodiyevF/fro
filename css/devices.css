@@ -1,0 +1,47 @@
+/* .company_wrapper{
+    height: 48px;
+} */
+
+.addmaster {
+    width: 233px;
+    background-position: calc(50% - 80px);
+}
+
+.workers_item{
+    width: 330px;
+    height: 48px;
+}
+
+.user_info--company{
+    display: flex;
+    align-items: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width:100px;
+}
+
+.edit_name{
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 13px;
+    border: 1px solid #A7A7A7;
+    font-size: 16px;
+    /* box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25); */
+    border-radius: 9px;
+    /* margin-left: 20px; */
+    color: black;   
+    outline: none;
+}
+
+.user_info--company_name{
+    width: 72px;
+    display: flex;
+    align-items: center;
+    user-select: none;
+    margin-left: auto;
+}
+
+.display_none{
+    display: none;
+}
