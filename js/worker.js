@@ -170,9 +170,7 @@ async function getpermissions() {
             i.checked = true
         }
 
-        console.log(i);
         if (i.action_id === 1 && i.permissions_names_id === 1) {
-            console.log('asdasd');
             read_user.checked = true
         }
 

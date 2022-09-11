@@ -21,7 +21,6 @@ right_header_input.onkeyup = async (e) => {
         })
 
         const data = await res.json()
-        console.log(data);
 
         right_header_input.style.borderColor = 'black'
         right_header_input.style.outlineColor = 'black'
@@ -129,10 +128,8 @@ right_header_input.onkeyup = async (e) => {
 
                         const about_user = data.data.find(el => el.client_id === e.target.dataset.client_id)
 
-                        console.log(about_user);
                         const asd = about_user.client_add_date.split('-')
                         let tes = asd[2][0] + asd[2][1] + '.' + asd[1] + '.' + asd[0];
-                        console.log(about_user);
                         const client_dasdidd = about_user.client_idd.toString().length === 1 ? '@ 00000' + about_user.client_idd : about_user.client_idd.toString().length === 2 ? '@ 0000' + about_user.client_idd : about_user.client_idd.toString().length === 3 ? '@ 000' + about_user.client_idd : about_user.client_idd.toString().length === 4 ? '@ 00' + about_user.client_idd : about_user.client_idd.toString().length === 5 ? '@ 0' + about_user.client_idd : about_user.client_idd.toString().length === 6 ? about_user.client_idd : about_user.client_idd
                         // const client_id = i.client_id.toString().length === 1 ? '@ 00000' + i.client_id : i.client_id.toString().length === 2 ? '@ 0000' + i.client_id : i.client_id.toString().length === 3 ? '@ 000' + i.client_id : i.client_id.toString().length === 4 ? '@ 00' + i.client_id : i.client_id.toString().length === 5 ? '@ 0' + i.client_id : i.client_id.toString().length === 6 ? i.client_id : i.client_id
 
@@ -171,8 +168,6 @@ right_header_input.onkeyup = async (e) => {
                 })
 
                 const data = await res.json()
-
-                console.log(data);
 
                 if (data.status != 200) {
                     messageModal.textContent = `Siz da "Mijozlar" bo'limini ko'rish huquqi yoq`

@@ -40,7 +40,6 @@ sendBtnDaily.onclick = async (e) => {
         })
         
         const data = await res.json()
-        console.log(data);
         results_list.innerHTML = ''
         if (!(data.data.length)) {
             // error_message.classList.remove('display_none')

@@ -20,7 +20,6 @@ right_header_input.onkeyup = async (e) => {
         })})
         
         const data = await res.json()
-        console.log(data);
         
         right_header_input.style.borderColor = 'black'
         right_header_input.style.outlineColor = 'black'
@@ -79,7 +78,6 @@ right_header_input.onkeyup = async (e) => {
 
 
                     // const endTIMEFINISH = parseInt(startEndDate[1].split(':')[0]) - (new Date()).getHours()
-                    // console.log(endTIMEFINISH);
 
                     if (i.order_status == 1) {
                         pStatus.style.color = 'black'
@@ -109,7 +107,6 @@ right_header_input.onkeyup = async (e) => {
                     }
 
                     pId.textContent = order_id
-                    console.log(i.client_fullname);
                     aOwner.textContent = i.client_fullname
                     pDevice.textContent = i.order_device_name
                     pAbout.textContent = i.order_device_bug
@@ -159,7 +156,6 @@ right_header_input.onkeyup = async (e) => {
                 right_header_input.style.outlineColor = 'red'
             }
         } else {
-            console.log('asd');
             orders_list.innerHTML = '';
             async function getOrders() {
                 const res = await fetch(api + '/orders', {
@@ -186,7 +182,6 @@ right_header_input.onkeyup = async (e) => {
 
                 // const minusDate = +overdate - getdate
 
-                // console.log((+overtime + gethours) + (minusDate * 24));
 
 
                 if (data.status === 400) {
@@ -254,7 +249,6 @@ right_header_input.onkeyup = async (e) => {
 
 
                                 // const endTIMEFINISH = parseInt(startEndDate[1].split(':')[0]) - (new Date()).getHours()
-                                // console.log(endTIMEFINISH);
 
                                 if (i.order_status == 1) {
                                     pStatus.style.color = 'black'
@@ -315,7 +309,6 @@ right_header_input.onkeyup = async (e) => {
 
                                 pStatus.onclick = (e) => {
                                     window.location = '/user.html'
-                                    console.log(e.target.parentNode.querySelector('.order_item_id').dataset.order_id);
                                     localStorage.setItem('client_id', e.target.dataset.client_id)
                                     localStorage.setItem('order_id', e.target.parentNode.querySelector('.order_item_id').dataset.order_id)
                                 }

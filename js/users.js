@@ -149,8 +149,6 @@ const user_deleter = document.querySelector(".user_deleter");
             // user_deleter.textContent = about_user.client_deleter
             user_deleter.style.display = 'none'
             
-            console.log(about_user);
-            
             if (about_user.client_delete) {
                 const deleteRes = await fetch(api+'/user/' + about_user.client_deleter)
                 const dataa = await deleteRes.json()    

@@ -193,75 +193,6 @@ window.onclick = function (event) {
     }
 }
 
-
-// user_info_fullname.ondblclick = (e) => {
-//     if (user_info_fullname.contentEditable == 'true') {
-//         user_info_fullname.contentEditable = 'inherit'
-//     } else {
-//         user_info_fullname.contentEditable = 'true'
-//         user_info_fullname.onkeyup = async (e) => {
-//             if (e.keyCode == 13) {
-//                 console.log(user_info_fullname.textContent);
-//                 if (user_info_fullname.textContent.length) {
-//                     const res = await fetch(api + '/user/put/fullname', {
-//                         method: 'PUT',
-//                         headers: {
-//                             'Content-Type': 'application/json'
-//                         },
-//                         body: JSON.stringify({
-//                             token: localStorage.getItem('token'),
-//                             client_id: localStorage.getItem('client_id'),
-//                             company_id: localStorage.getItem('company'),
-//                             client_fullname: user_info_fullname.textContent
-//                         })
-//                     })
-
-//                     console.log(await res.json());
-//                 } else {
-//                     user_info_fullname.style.color = 'red'
-//                 }
-//             }
-//         }
-//     }
-// }
-
-// user_info_item_value_tel.ondblclick = (e) => {
-//     if (user_info_item_value_tel.contentEditable == 'true') {
-//         user_info_item_value_tel.contentEditable = 'inherit'
-//     } else {
-//         user_info_item_value_tel.contentEditable = 'true'
-//         user_info_item_value_tel.onkeyup = async (e) => {
-//             if (e.keyCode == 13) {
-//                 console.log(user_info_item_value_tel.textContent);
-//                 if (user_info_item_value_tel.textContent.length) {
-//                     if (user_info_item_value_tel.textContent.length <= 9) {
-//                         const res = await fetch(api + '/user/put/number1', {
-//                             method: 'PUT',
-//                             headers: {
-//                                 'Content-Type': 'application/json'
-//                             },
-//                             body: JSON.stringify({
-//                                 token: localStorage.getItem('token'),
-//                                 client_id: localStorage.getItem('client_id'),
-//                                 company_id: localStorage.getItem('company'),
-//                                 client_phone_number_first: user_info_item_value_tel.textContent
-//                             })
-//                         })
-
-//                         console.log(await res.json());
-//                         user_info_item_value_tel.contentEditable = 'inherit'
-//                     } else {
-//                         alert('901234567 shu holarda kiriting !')
-//                         user_info_item_value_tel.contentEditable = 'inherit'
-//                     }
-//                 } else {
-//                     user_info_item_value_tel.style.color = 'red'
-//                 }
-//             }
-//         }
-//     }
-// }
-
 user_info_status.onclick = (e) => {
     if (user_statuts.classList[1] === 'display_none') {
         user_statuts.classList.remove('display_none')
@@ -574,8 +505,6 @@ for (const i of user_status) {
                     divSpanId.appendChild(btnSpanId8)
                 }
                 
-                console.log(i.order_status);
-                
                 // divSpanId.appendChild(btnSpanId1)
                 // divSpanId.appendChild(btnSpanId2)
                 // divSpanId.appendChild(btnSpanId3)
@@ -693,9 +622,7 @@ for (const i of user_status) {
                             yetkazildi_model.style.display = 'none'
 
                             
-                            console.log(dataa.status);
                             if (dataa.status == 200) {
-                                console.log('asdasd');
                                 asd.textContent = e.target.textContent
                                 asd.style.border = 'none'
 
@@ -800,7 +727,6 @@ for (const i of user_status) {
     //         const sta = status ? el.client_status == status : ''
     //         const name = ism ? el.client_fullname.match(regExpInputName) : ''
     //         // const date = sana ? sana_fixed > sana : ''
-    //         // console.log(date);
     
     //         const data = {
     //             status: sta ? sta : '',
@@ -809,7 +735,6 @@ for (const i of user_status) {
     //         return data
     //     })
     
-    //     console.log(filtered);
     
     // }
     

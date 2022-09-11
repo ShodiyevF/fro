@@ -5,7 +5,6 @@ const input = document.querySelector('.login_input')
 
 form.addEventListener('submit', async (e) => {
     e.preventDefault()
-    console.log('asd');
 
     const res = await fetch(api+'/recoverpass',{
         method: 'POST',

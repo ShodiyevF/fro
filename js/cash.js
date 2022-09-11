@@ -13,5 +13,4 @@ import { api } from "./serverdomain.js"
         })
     })
     const data = await res.json()
-    console.log(data);
 })()

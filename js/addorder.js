@@ -49,8 +49,6 @@ form.addEventListener('submit', async (e) => {
     inputTell.style.borderColor = '#A7A7A7'
     inputAddress.style.borderColor = '#A7A7A7'
 
-    console.log(typeof +(inputTel.value) != 'number');
-    console.log(inputTel.value);
     
     if (inputName.value === '' || inputName.value.length > 50 || typeof inputTel.value != 'string') {
         
