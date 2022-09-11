@@ -57,8 +57,6 @@ const settings = document.querySelector('.left_item_settings');
                             <p class="left_main_item_text">Buyurtmalar</p>
                         </a>
                     </li>`
-        cash.remove()
-        statistic.remove()
     }
 
     const elLeftItem = document.querySelectorAll('.left_main_item')
