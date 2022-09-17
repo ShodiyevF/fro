@@ -46,10 +46,11 @@ form.addEventListener('submit', async (e) => {
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({login: inputEmail.value,password: parseInt(inputPassword.value)})
+        body: JSON.stringify({login: inputEmail.value,password: inputPassword.value})
     })
 
     const data = await res.json()
+    console.log(data);
     if (data.status === 200) {
         localStorage.setItem('token', data.key)
         if(rememberme.checked){

@@ -1,7 +1,6 @@
 .inputs_wrapper{
     margin-top: 77px;
     display: flex;
-    flex-wrap: wrap;
 }
 
 .addmaster_btn {
@@ -39,11 +38,31 @@
     margin-right: 20px;
 }
 
-.company{
+.master_fullname {
+    width: 170px;
+}
+
+.master_login{
+    width: 170px;
+}
+
+.master_password {
+    width: 130px;
+}
+
+.selection{
     width: 100px;
     padding-left: 10px;
     height: 45px;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
     border: 1px solid #A7A7A7;
     border-radius: 9px;
+}
+
+.company{
+    margin-right: 20px;
+}
+
+.user_type{
+    margin-right: 20px;
 }

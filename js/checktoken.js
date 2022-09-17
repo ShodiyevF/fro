@@ -14,6 +14,7 @@ import {api} from './serverdomain.js'
     
     const data = await res.json()
     
+    console.log(data);
     if (!(localStorage.getItem('company'))) {
         localStorage.setItem('company', data.data[0].company_id)
     }

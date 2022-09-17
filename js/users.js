@@ -1,5 +1,8 @@
 import {api} from './serverdomain.js'
 
+const left = document.querySelector(".left");
+const right = document.querySelector(".right");
+
 const messageModall = document.querySelector(".message_modall");
 const messageModal = document.querySelector(".message_modal");
 const rightMain = document.querySelector(".right_main");
@@ -124,16 +127,22 @@ const user_deleter = document.querySelector(".user_deleter");
     
     span.onclick = function() {
         modal.style.display = "none";
+        left.style.filter = 'blur(0px)'
+        right.style.filter = 'blur(0px)'
     }
     
     window.onclick = function(event) {
         if (event.target == modal) {
             modal.style.display = "none";
+            left.style.filter = 'blur(0px)'
+            right.style.filter = 'blur(0px)'
         }
     }
     
     for (const i of btn) {
         i.onclick = async (e) => {
+            left.style.filter = 'blur(3px)'
+            right.style.filter = 'blur(3px)'
             modal.style.display = "block";
             
             const about_user = data.data.find(el => +(el.client_id) === +(e.target.dataset.client_id))

@@ -18,7 +18,8 @@ const settings = document.querySelector('.left_item_settings');
     })
     
     const check = await res.json()
-    if (check.status === 200) {
+    console.log(check);
+    if (check.status === 200 || check.status === 777) {
         list.innerHTML = `<li class="left_main_item left_item_users left_itemm">
                         <a class="left_main_item_link" href="users.html">
                             <img class="left_main_item_img" src="img/main/mijozlar.svg" alt="">
@@ -43,8 +44,7 @@ const settings = document.querySelector('.left_item_settings');
                             <p class="left_main_item_text">Statistka</p>
                         </a>
                     </li>`
-    }
-    if (check.status != 200) {
+    } else {
         list.innerHTML = `<li class="left_main_item left_item_users left_itemm">
                         <a class="left_main_item_link" href="users.html">
                             <img class="left_main_item_img" src="img/main/mijozlar.svg" alt="">
