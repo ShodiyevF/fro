@@ -22,6 +22,7 @@ async function name() {
     
     const data = await res.json()
     
+    console.log(data.data);
     for (const i of data.data) {
         
         const li = document.createElement('li')
@@ -78,7 +79,7 @@ async function name() {
         
         
         user_info_company.textContent = 'company'
-        user_info_company_name.textContent = i.company_fullname
+        user_info_company_name.textContent = i.company_fullname == null ? 'Mavjud emas' : i.company_fullname
         
         workers_list_info.appendChild(user_info_sur)
         workers_list_info.appendChild(user_info_fir)

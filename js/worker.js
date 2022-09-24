@@ -121,6 +121,7 @@ next.onclick = async (e) => {
 })()
 
 company_name.onchange = async (e) => {
+    
     const res = await fetch(api + '/companys/workers/put', {
         method: 'PUT',
         headers: {
@@ -134,6 +135,7 @@ company_name.onchange = async (e) => {
     })
 
     const data = await res.json()
+    console.log(data);
 }
 
 
@@ -154,7 +156,6 @@ async function getpermissions() {
     const data = await res.json()
     
     const dat = data.data
-    console.log(dat);
 
     const statuts = []
     for (const i of orderStatusChange) {
@@ -205,8 +206,6 @@ async function getpermissions() {
         if (i.action_id === 2 && i.permissions_names_id === 4) {
             put_order.checked = true
         }
-
-        console.log(i.action_id, i.permissions_names_id);
         
         if (i.action_id === 3 && i.permissions_names_id === 1) {
             daliy_cash.checked = true

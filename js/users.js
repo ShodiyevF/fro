@@ -141,8 +141,10 @@ const user_deleter = document.querySelector(".user_deleter");
     
     for (const i of btn) {
         i.onclick = async (e) => {
-            left.style.filter = 'blur(3px)'
-            right.style.filter = 'blur(3px)'
+            left.style.filter = 'blur(2px)'
+            left.style.transition = '0.9s -webkit-filter linear'
+            right.style.filter = 'blur(2px)'
+            right.style.transition = '0.9s -webkit-filter linear'
             modal.style.display = "block";
             
             const about_user = data.data.find(el => +(el.client_id) === +(e.target.dataset.client_id))

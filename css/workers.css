@@ -4,25 +4,27 @@
     margin: 0;
     display: flex;
     flex-direction: column;
+    width: 300px;
+    height: 550px;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 .workers_item{
     background-color: rgba(30, 144, 255, 0.6);
     padding: 5px 10px;
     border-radius: 5px;
-    display: flex;
     margin-bottom: 10px;
 }
 
 .workers_link{
+    width: auto;
     text-decoration: none;
     color: black;
     z-index: 1000;
 }
 
-.workers_linkk{
-
-}
 
 .workers_list_info{
     padding-top: 5px;
@@ -58,11 +60,16 @@
 
 .workers_list_auth{
     margin-top: 5px;
+    margin-left: -20px;
     margin-left: auto;
 }
 
 .user_auth{
     margin: 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100px;
 }
 
 .user_auth--login{
@@ -104,27 +111,14 @@
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
-    width: 50px;
-    margin-left: 70px;
+    width: 100px;
+    margin-left: auto;
 }
 
 .logins{
     font-weight: bold;
 }
 
-.workers_list{
-    height: 550px;
-    overflow-x: auto;
-}
-
 .workers_list::-webkit-scrollbar {
     display: none;
-}
-
-/* Hide scrollbar for IE, Edge and Firefox */
-.workers_list {
-    -ms-overflow-style: none;
-    /* IE and Edge */
-    scrollbar-width: none;
-    /* Firefox */
 }
