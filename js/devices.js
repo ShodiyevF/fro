@@ -90,9 +90,11 @@ async function getDeviceTypes() {
     for (const i of user_info_edit_s) {
         i.ondblclick = (e) => {
             const input = result.find(el => el.dataset.id == e.target.dataset.id)
+            console.log(input);
             const name = result_name.find(el => el.dataset.id == e.target.dataset.id) 
             input.value = name.textContent
             input.style.borderColor = 'black'
+            console.log(e.target);
             if (input.classList[1]) {
                 input.classList.remove('display_none')
                 name.classList.add('display_none')

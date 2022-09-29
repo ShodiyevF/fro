@@ -8,8 +8,9 @@
 }
 
 .workers_item{
-    width: 330px;
     height: 48px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .user_info--company{
@@ -22,6 +23,7 @@
 }
 
 .edit_name{
+    width: 200px;
     padding-top: 9px;
     padding-bottom: 9px;
     padding-left: 13px;
@@ -39,7 +41,7 @@
     display: flex;
     align-items: center;
     user-select: none;
-    margin-left: auto;
+    margin: 0;
 }
 
 .display_none{

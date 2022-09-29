@@ -76,36 +76,71 @@ const inputs_wrapper = document.querySelector('.inputs_wrapper');
         company.style.borderColor = '#A7A7A7'
 
 
-        if (!(fullname.value.length) || fullname.value.length > 54) {
-            fullname.style.borderColor = 'red'
-        } else if (!(login.value.length) || login.value.length > 54) {
-            login.style.borderColor = 'red'
-        } else if (!(password.value.length) || password.value.length > 7 || typeof +(password.value) != 'number') {
-            password.style.borderColor = 'red'
-        } else if (!(company.value) || typeof +(company.value) != 'number') {
-            company.style.borderColor = 'red'
-        } else if (!(user_type.value) || typeof +(user_type.value) != 'number') {
-            user_type.style.borderColor = 'red'
-        } else {
-            const res = await fetch(api + '/companys/workers/add', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    token: localStorage.getItem('token'),
-                    fullname: fullname.value,
-                    login: login.value,
-                    password: password.value,
-                    company_id: company.value,
-                    status: user_type.value ? user_type.value : 2
+        if (user_type != null) {
+            if (!(fullname.value.length) || fullname.value.length > 54) {
+                fullname.style.borderColor = 'red'
+            } else if (!(login.value.length) || login.value.length > 54) {
+                login.style.borderColor = 'red'
+            } else if (!(password.value.length) || password.value.length > 7 || typeof +(password.value) != 'number') {
+                password.style.borderColor = 'red'
+            } else if (!(company.value) || typeof +(company.value) != 'number') {
+                company.style.borderColor = 'red'
+            } else if (!(user_type.value) || typeof +(user_type.value) != 'number') {
+                user_type.style.borderColor = 'red'
+            } else {
+                const res = await fetch(api + '/companys/workers/add', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        token: localStorage.getItem('token'),
+                        fullname: fullname.value,
+                        login: login.value,
+                        password: password.value,
+                        company_id: company.value,
+                        status: user_type.value ? user_type.value : 2
+                    })
                 })
-            })
 
-            const data = await res.json()
+                const data = await res.json()
 
-            if (data.status === 200) {
-                window.location = '/workers.html'
+                if (data.status === 200) {
+                    window.location = '/workers.html'
+                }
+            }
+        } else {
+            if (!(fullname.value.length) || fullname.value.length > 54) {
+                fullname.style.borderColor = 'red'
+            } else if (!(login.value.length) || login.value.length > 54) {
+                login.style.borderColor = 'red'
+            } else if (!(password.value.length) || password.value.length > 7 || typeof +(password.value) != 'number') {
+                password.style.borderColor = 'red'
+            } else if (!(company.value) || typeof +(company.value) != 'number') {
+                company.style.borderColor = 'red'
+            } else {
+                const res = await fetch(api + '/companys/workers/add', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        token: localStorage.getItem('token'),
+                        fullname: fullname.value,
+                        login: login.value,
+                        password: password.value,
+                        company_id: company.value,
+                        status: user_type ? user_type.value : 2
+                    })
+                })
+
+                const data = await res.json()
+
+                console.log(data);
+
+                if (data.status === 200) {
+                    window.location = '/workers.html'
+                }
             }
         }
     }

@@ -19,18 +19,18 @@
 .users{
     height: 200px;
 }
-
-.workers_item{
-    width: 200px;
-}
-
 .workers_link{
-    width: 250px;
     display: flex;
     flex-direction: column;
+    
+}
+
+.workers_list{
+    width: 400px;
 }
 
 .workers_list_info{
+    width: auto;
     display: flex;
     cursor: pointer;
     flex-direction: row;
@@ -69,7 +69,10 @@
 }
 
 .user_auth{
+    width: auto;
     margin-left: auto;
+    text-overflow: inherit;
+    overflow: hidden;
 }
 
 .permissions_users{
